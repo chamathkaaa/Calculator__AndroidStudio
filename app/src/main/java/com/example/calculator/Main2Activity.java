@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Main2Activity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity implements View.OnClickListener {
 
     TextView num1, num2, answer;
     Button btnPlus, btnMinus, btnMul, btnDiv;
@@ -22,8 +22,8 @@ public class Main2Activity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        num1 = findViewById(R.id.editText1);
-        num2 = findViewById(R.id.editText2);
+        num1 = findViewById(R.id.num1);
+        num2 = findViewById(R.id.num2);
         btnPlus = findViewById(R.id.button1);
         btnMinus = findViewById(R.id.button2);
         btnMul = findViewById(R.id.button3);
@@ -39,10 +39,10 @@ public class Main2Activity extends AppCompatActivity {
         num1.setText(value1);
         num2.setText(value2);
 
-        btnPlus.setOnClickListener((View.OnClickListener) this);
-        btnMinus.setOnClickListener((View.OnClickListener) this);
-        btnMul.setOnClickListener((View.OnClickListener) this);
-        btnDiv.setOnClickListener((View.OnClickListener) this);
+        btnPlus.setOnClickListener(this);
+        btnMinus.setOnClickListener(this);
+        btnMul.setOnClickListener(this);
+        btnDiv.setOnClickListener(this);
 
     }
 

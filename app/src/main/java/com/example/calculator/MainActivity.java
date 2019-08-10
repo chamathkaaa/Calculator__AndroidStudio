@@ -20,18 +20,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnOk = findViewById(R.id.btnOK);
-        text1 = findViewById(R.id.editText1);
-        text2 = findViewById(R.id.editText2);
+        text1 = findViewById(R.id.num1);
+        text2 = findViewById(R.id.num2);
 
     }
 
+    /*public void send(View v)
+    {
+        Intent i = new Intent(MainActivity.this, Main2Activity.class);
+        startActivity(i);
+    }*/
+
+
+    @Override
     protected void onResume()
     {
         super.onResume();
 
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 n1 = text1.getText().toString();
                 n2 = text2.getText().toString();
 
